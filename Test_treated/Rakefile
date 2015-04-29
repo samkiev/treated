@@ -1,0 +1,7 @@
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:full_smoke) do |task|
+  task.pattern = 'spec/*_spec.rb'
+end
+
+task :default => :full_smoke
